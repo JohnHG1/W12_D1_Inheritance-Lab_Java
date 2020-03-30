@@ -12,22 +12,27 @@ public class ManagerTest {
     public void setUp(){
         manager = new Staff.management.Manager("JHG","AB1234O", 20000, "DevOps");
     }
+
     @Test
     public void canGetName(){
         assertEquals("JHG", manager.getName());
     }
+
     @Test
     public void canGetNatNumber(){
         assertEquals("AB1234", manager.getNatInsurance());
     }
+
     @Test
     public void canGetSalary(){
         assertEquals(20000, manager.getSalary(), 0.1);
     }
+
     @Test
     public void canGetDeptName(){
         assertEquals("DevOps", manager.getDeptName());
     }
+
     @Test
     public void canRaiseSalary(){
         manager.raiseSalary(10000.5);
